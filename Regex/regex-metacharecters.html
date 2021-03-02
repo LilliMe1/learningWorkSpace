@@ -1,0 +1,23 @@
+<html>
+<script>
+    let regex = /harrydfsd/;
+    // Lets look into some metacharacter symbols
+    regex = /^hdfsd/; //^ means expression will match if string starts with
+    regex = /harry$/; // $ at the end of the string means "string ends withs"
+    regex = /h.arry/; //matches anyone charecter
+    regex = /h*arry/; //matches 0 or more charecters
+    regex = /ha?rryi?/; //a,i are optional
+    regex = /h\*rry/; //* itself-->\*
+    let str = "harry is harry";
+
+    let result = regex.exec(str);
+    console.log("This result from exec is", result);
+
+    if (regex.test(str)) {
+        console.log('The string', str, 'matches the expression', regex.source);
+    } else {
+        console.log('The string', str, 'does not match the expression', regex.source);
+    }
+</script>
+
+</html>

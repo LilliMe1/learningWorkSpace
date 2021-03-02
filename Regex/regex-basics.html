@@ -1,0 +1,49 @@
+<html>
+<script>
+    //let reg = /This/; //regex expressions lie btw forward and backward slashes
+    //let reg = /This/g; //g means global
+    let reg = /This/; //i means case insensitive
+    //reg = /This/g;
+    console.log(reg);
+    console.log(reg.source);
+    let s = "This is a test string harry This";
+
+    //Functions to match expressions
+    //1.exec()-->To write a function which will return an array for match or null for no match
+
+    let result = reg.exec(s);
+    console.log(result.input);
+    result = reg.exec(s);
+    console.log(result.index);
+
+
+    // result = reg.exec(s);
+    // console.log(result);
+    // result = reg.exec(s);
+    // console.log(result);
+    // result = reg.exec(s);
+    // console.log(result);//-->We can use multiple exec() using the global flag g
+
+    //2.test() Returns true or false
+    let result2 = reg.test(s);
+    console.log(result2); //This will only print true if the reg is there in the string s
+
+    //3.match()-->It will result an array of results or null
+    // let result3 = reg.match(s)-->This is wrong
+    let result3 = s.match(reg);
+    console.log(result3);
+
+    //4.search()returns index of first match else -1
+    let result4 = s.search(reg);
+    console.log(result4);
+
+    //5.replace()-->Returns new replaced string with all the replacements
+    let result5 = s.replace(reg, 'that');
+    console.log(result5);
+</script>
+
+<body>
+
+</body>
+
+</html>
